@@ -7,6 +7,9 @@ Package.describe({
 });
 
 Package.on_use(function(api) {
+    api.use('underscore@1.0.0');
+    api.use('ejson@1.0.3');
+
     api.use([
         'underscore',
         'ejson'
