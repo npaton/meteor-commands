@@ -2,7 +2,7 @@ Package.describe({
     summary: "Run commands in the running meteor instance",
     description: "Define commands that run within the app's environment",
     git: 'https://github.com/npaton/meteor-commands.git',
-    version: '0.0.1',
+    version: '0.1.0',
     name: "npaton:commands"
 });
 

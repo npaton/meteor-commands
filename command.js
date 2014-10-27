@@ -18,12 +18,16 @@ Commands = function (commands) {
 Commands.isMirror = false;
 
 Commands.run = function (cmd) {
+    if (!_commands[cmd])
+        return console.error("Command not found:", cmd);
     var args = Array.prototype.slice.call(arguments);
     args = args.slice(1,args.length);
     _commands[cmd].apply(null, args);
 };
 
 Commands.apply = function (cmd, args) {
+    if (!_commands[cmd])
+        return console.error("Command not found:", cmd);
     Fiber(function() {
         _commands[cmd].apply(null, args);
     }).run();
