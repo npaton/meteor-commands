@@ -1,5 +1,5 @@
-var fs = Meteor.npmRequire('fs'),
-    path = Meteor.npmRequire('path');
+var fs = Npm.require('fs'),
+    path = Npm.require('path');
 
 var runner = "#!/usr/bin/env node\n\
 \n\
