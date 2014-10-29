@@ -1,9 +1,9 @@
 Fiber = Npm.require('fibers');
 
 var _commands = {};
-var fs = Meteor.npmRequire('fs'),
-    os = Meteor.npmRequire('os'),
-    path = Meteor.npmRequire('path');
+var fs = Npm.require('fs'),
+    os = Npm.require('os'),
+    path = Npm.require('path');
 
 Commands = function (commands) {
 
