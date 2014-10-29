@@ -26,5 +26,8 @@ Meteor.startup(function(){
     if (fs.existsSync(file)) return;
     fs.writeFileSync(file, runner);
     fs.chmodSync(file, 0550);
-    fs.appendFile(gitfile, "\ncommands\n");
+    if (!fs.existsSync(gitfile)) return;
+    var gitfileContent = fs.readFileSync(gitfile).toString();
+    if (!gitfileContent.match(/commands/))
+        fs.appendFileSync(gitfile, "\ncommands\n");
 });
